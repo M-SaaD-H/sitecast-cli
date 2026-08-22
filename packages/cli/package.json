@@ -1,0 +1,37 @@
+{
+  "name": "sitecast",
+  "version": "0.1.0",
+  "description": "Record websites as videos on your local machine.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saadeghi/sitecast-cli"
+  },
+  "bin": {
+    "sitecast": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint ./src",
+    "test": "node --import tsx --test 'src/**/*.test.ts'"
+  },
+  "dependencies": {
+    "@sitecast/renderer": "workspace:*",
+    "commander": "^12.1.0",
+    "playwright": "^1.60.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "esbuild": "^0.25.0",
+    "tsx": "^4.23.12",
+    "typescript": "^5.8.3"
+  }
+}
