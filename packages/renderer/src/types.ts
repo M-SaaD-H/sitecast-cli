@@ -16,6 +16,7 @@ export interface RecordingOptions {
     width: number;
     height: number;
   };
+  fps?: number;
   enableDarkMode?: boolean;
   showBrowserFrame?: boolean;
   scroll: ScrollOptions;
@@ -30,7 +31,6 @@ export interface RecordingJob {
 export interface RecordingResult {
   jobId: string;
   outputPath: string;
-  publicUrl: string;
   durationSeconds: number;
   fileSizeBytes: number;
 }

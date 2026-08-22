@@ -10,7 +10,7 @@ import { spawn } from "child_process";
 import type { FFmpegProcess } from "./types";
 
 const FFMPEG_BIN = process.env.FFMPEG_BIN ?? "ffmpeg";
-const RECORDING_FPS = 30;
+const DEFAULT_FPS = 30;
 // Maximum time to wait for FFmpeg to finish muxing after sending 'q'
 const STOP_TIMEOUT_MS = 15_000;
 
@@ -22,12 +22,13 @@ export function startRecording(
   display: string,
   outputPath: string,
   resolution: string,
+  fps: number = DEFAULT_FPS,
 ): FFmpegProcess {
   const args = [
     "-y", // overwrite without prompting
     // Input: x11grab from the virtual display
     "-f", "x11grab",
-    "-r", String(RECORDING_FPS),
+    "-r", String(fps),
     "-s", resolution,
     "-draw_mouse", "0",
     "-i", `${display}+0,0`,

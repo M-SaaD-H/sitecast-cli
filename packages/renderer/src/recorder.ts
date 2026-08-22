@@ -114,7 +114,7 @@ export async function recordWebsite(job: RecordingJob): Promise<RecordingResult>
     });
     await page.emulateMedia({ colorScheme: job.options.enableDarkMode ? "dark" : "light" });
 
-    ffmpegHandle = startRecording(displayEnv, tempPath, resolution);
+    ffmpegHandle = startRecording(displayEnv, tempPath, resolution, job.options.fps);
     const recordingStart = Date.now();
 
     await sleep(500);
@@ -152,7 +152,6 @@ export async function recordWebsite(job: RecordingJob): Promise<RecordingResult>
   return {
     jobId: job.jobId,
     outputPath: tempPath,
-    publicUrl: tempPath,
     durationSeconds: recordedDurationSeconds,
     fileSizeBytes: size,
   };
