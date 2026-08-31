@@ -11,7 +11,7 @@
     "sitecast": "./dist/index.js"
   },
   "files": [
-    "dist",
+    "dist/index.js",
     "README.md"
   ],
   "engines": {
@@ -21,14 +21,14 @@
     "build": "node build.mjs",
     "type-check": "tsc --noEmit",
     "lint": "eslint ./src",
-    "test": "node --import tsx --test 'src/**/*.test.ts'"
+    "test": "node --import tsx --test 'tests/**/*.test.ts'"
   },
   "dependencies": {
-    "@sitecast/renderer": "workspace:*",
     "commander": "^12.1.0",
     "playwright": "^1.60.0"
   },
   "devDependencies": {
+    "@sitecast/renderer": "workspace:*",
     "@types/node": "^22.0.0",
     "esbuild": "^0.25.0",
     "tsx": "^4.23.12",
