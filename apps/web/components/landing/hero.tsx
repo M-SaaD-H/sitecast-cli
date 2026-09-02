@@ -18,20 +18,15 @@ export function Hero() {
   };
 
   return (
-    <section className="py-16 md:py-24 border-b border-border">
+    <section className="py-16 md:py-24">
       <div className="container max-w-5xl mx-auto px-4 md:px-8 text-center flex flex-col items-center">
-        
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-surface text-xs font-mono text-muted-foreground mb-8">
-          <span className="w-2 h-2 rounded-full bg-emerald-500" />
-          <span>100% Free &amp; Open Source</span>
-        </div>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.15] max-w-3xl">
-          Record website demo videos directly from your terminal.
+          Turn any website into a demo video from your terminal.
         </h1>
 
-        <p className="mt-6 text-base sm:text-lg text-muted-foreground max-w-2xl leading-relaxed">
-          Sitecast runs a headless Chromium browser locally, smoothly scrolls through any website, and outputs a high-definition MP4 video. No accounts, no subscriptions, no cloud APIs.
+        <p className="mt-2 text-base sm:text-lg text-muted-foreground max-w-2xl leading-relaxed">
+          Sitecast runs Chromium locally, automatically records your website, and outputs a high-definition MP4. No accounts. No subscriptions. No cloud.
         </p>
 
         {/* Command Copy Box */}

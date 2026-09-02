@@ -4,7 +4,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Logo, LogoDark } from "@/components/ui/logo";
 import { Button } from "@/components/ui/button";
-import { IconCopy, IconCheck, IconBrandGithub, IconTerminal } from "@tabler/icons-react";
+import { IconCopy, IconCheck, IconTerminal } from "@tabler/icons-react";
+import { FaGithub } from "react-icons/fa6";
 import { toast } from "sonner";
 
 export function Navbar() {
@@ -35,7 +36,6 @@ export function Navbar() {
           <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-muted-foreground">
             <Link href="/" className="transition-colors hover:text-foreground">Home</Link>
             <Link href="/docs" className="transition-colors hover:text-foreground">Docs</Link>
-            <Link href="/examples" className="transition-colors hover:text-foreground">Examples</Link>
           </nav>
         </div>
 
@@ -55,13 +55,13 @@ export function Navbar() {
           </button>
 
           <a
-            href="https://github.com"
+            href="https://github.com/M-SaaD-H/sitecast-cli"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-foreground transition-colors p-2"
             aria-label="GitHub Repository"
           >
-            <IconBrandGithub className="w-5 h-5" />
+            <FaGithub className="w-5 h-5" />
           </a>
 
           <Link href="/docs" className="sm:hidden">
@@ -74,3 +74,4 @@ export function Navbar() {
     </header>
   );
 }
+

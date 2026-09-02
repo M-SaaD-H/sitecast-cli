@@ -99,17 +99,19 @@ The video is saved to `./sitecast-<timestamp>.mp4` in the current directory.
 
 ### Options
 
+| Option                   | Description                                         | Default                                 |
+|--------------------------|-----------------------------------------------------|-----------------------------------------|
+| `-o, --output <path>`    | Output file path                                    | `./sitecast-<timestamp>.mp4`            |
+| `--width <px>`           | Viewport width in pixels                            | `1280`                                  |
+| `--height <px>`          | Viewport height in pixels                           | `720`                                   |
+| `--fps <n>`              | Recording frame rate                                | `30`                                    |
+| `--no-browser-frame`     | Record without the browser chrome (kiosk mode)      |                                         |
+| `--dark-mode`            | Enable dark color scheme                            |                                         |
+| `-v, --verbose`          | Print FFmpeg and Playwright output                  |                                         |
+
+**Usage:**  
 ```
 sitecast render <url> [options]
-
-Options:
-  -o, --output <path>         Output file path (default: ./sitecast-<timestamp>.mp4)
-  --width <px>                Viewport width in pixels (default: 1280)
-  --height <px>               Viewport height in pixels (default: 720)
-  --fps <n>                   Recording frame rate (default: 30)
-  --no-browser-frame          Record without the browser chrome (kiosk mode)
-  --dark-mode                 Enable dark color scheme
-  -v, --verbose               Print FFmpeg and Playwright output
 ```
 
 ### Examples
@@ -173,7 +175,7 @@ shared libraries. The `sitecast doctor` output usually points to the issue.
 
 Sitecast currently supports Linux only. If you are on macOS or Windows and
 would like to help demonstrate demand for your platform, reach out on
-X (https://x.com/saadeghi) or by email.
+[X](https://x.com/_MSaaDH) or by [email](mailto:mohd.saadhaider@gmail.com).
 
 ## Environment variables
 

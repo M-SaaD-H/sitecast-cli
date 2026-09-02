@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo, LogoDark } from "@/components/ui/logo";
+import { FaGithub } from "react-icons/fa6";
 
 export function Footer() {
   return (
@@ -19,8 +20,15 @@ export function Footer() {
           <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
             <Link href="/" className="hover:text-foreground transition-colors">Home</Link>
             <Link href="/docs" className="hover:text-foreground transition-colors">Documentation</Link>
-            <Link href="/examples" className="hover:text-foreground transition-colors">Examples</Link>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">GitHub</a>
+            <a
+              href="https://github.com/M-SaaD-H/sitecast-cli"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-foreground transition-colors inline-flex items-center gap-1.5"
+            >
+              <FaGithub className="w-4 h-4" />
+              <span>GitHub</span>
+            </a>
           </div>
         </div>
 
@@ -32,3 +40,4 @@ export function Footer() {
     </footer>
   );
 }
+
