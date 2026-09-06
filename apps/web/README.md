@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/create-next-app).
+# Sitecast Web
 
-## Getting Started
+The documentation and landing page for Sitecast.
 
-First, run the development server:
+## Tech Stack
+
+- Framework: Next.js 14
+- Styling: Tailwind CSS v4
+- Components: Base UI Components
+- Icons: Tabler Icons & React Icons
+
+## Development
+
+First, ensure you have dependencies installed from the repository root:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# from the root of the turborepo
+pnpm install
+```
+
+Then, run the development server for the web app:
+
+```bash
+# from apps/web
 pnpm dev
-# or
-bun dev
+# or from the root
+turbo run dev --filter=web
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The documentation content can be found in `app/docs/page.tsx`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load Inter, a custom Google Font.
+## Building for Production
 
-## Learn More
+To build the application for production:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# from apps/web
+pnpm build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The app is configured to be deployed on platforms like Vercel.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Documentation Structure
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The main CLI manual and documentation is located at `/docs` (`app/docs/page.tsx`). It covers:
+- Quickstart guide
+- System Requirements
+- Command Reference (`render`, `doctor`, `setup`)
+- Options & Flags
+- Troubleshooting common issues
