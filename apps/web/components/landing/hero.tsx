@@ -21,8 +21,8 @@ export function Hero() {
     <section className="py-16 md:py-24">
       <div className="container max-w-5xl mx-auto px-4 md:px-8 text-center flex flex-col items-center">
 
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.15] max-w-3xl">
-          Turn any website into a demo video from your terminal.
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-balance tracking-tight leading-[1.15] max-w-3xl">
+          Turn any website into a demo video without manual recording.
         </h1>
 
         <p className="mt-2 text-base sm:text-lg text-muted-foreground max-w-2xl leading-relaxed">

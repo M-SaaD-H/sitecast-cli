@@ -174,7 +174,7 @@ export function CliGenerator() {
                 </span>
               </div>
 
-              <div className="p-3 rounded bg-surface border border-border font-mono text-xs text-foreground break-all leading-relaxed">
+              <div className="p-2 rounded bg-surface border border-border font-mono text-xs text-foreground break-all leading-relaxed">
                 {generatedCmd}
               </div>
             </div>

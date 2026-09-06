@@ -33,7 +33,17 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 text-xs text-muted-foreground">
-          <p>Released under the MIT License. Free for commercial and personal use.</p>
+          <p>
+            Released under the MIT License. Free for commercial and personal use.
+            Built by {' '}
+            <Link
+              href="https://heysaad.me"
+              target="blank"
+              className="text-foreground hover:text-muted-foreground transition-colors underline"
+            >
+              this guy
+            </Link>
+          </p>
           <p className="font-mono">Linux supported</p>
         </div>
       </div>

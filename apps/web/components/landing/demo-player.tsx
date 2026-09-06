@@ -36,7 +36,7 @@ export function DemoPlayer() {
         </div>
 
         {/* Browser Window Frame */}
-        <div className="rounded-lg border border-border bg-surface shadow-xs overflow-hidden">
+        <div className="rounded-xl border border-border bg-surface shadow-xs overflow-hidden">
           {/* Header Controls */}
           <div className="h-10 border-b border-border bg-muted/40 px-4 flex items-center justify-between">
             <div className="flex items-center gap-2">
@@ -70,7 +70,7 @@ export function DemoPlayer() {
           </div>
 
           {/* Video Container */}
-          <div className="relative aspect-video bg-black flex items-center justify-center">
+          <div className="relative aspect-video bg-black flex items-center justify-center overflow-hidden">
             <video
               ref={videoRef}
               src="/demo.mp4"
@@ -78,7 +78,7 @@ export function DemoPlayer() {
               loop
               muted
               playsInline
-              className="w-full h-full object-contain"
+              className="w-full h-full object-cover scale-[1.01]"
             />
           </div>
         </div>

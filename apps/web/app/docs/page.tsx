@@ -52,7 +52,10 @@ export default function DocsPage() {
               Install Sitecast globally via npm, check system dependencies using <code className="font-mono bg-surface px-1.5 py-0.5 rounded border border-border">sitecast doctor</code>, and record your first website video.
             </p>
 
-            <div className="space-y-3 font-mono text-xs">
+            <div className="space-y-2 text-xs">
+              <h3 className="text-sm text-muted-foreground leading-relaxed mt-2">
+                1. Install Sitecast globally via npm.
+              </h3>
               <div className="p-4 rounded-md border border-border bg-surface flex items-center justify-between">
                 <code className="text-foreground">npm install -g sitecast</code>
                 <button
@@ -63,6 +66,9 @@ export default function DocsPage() {
                 </button>
               </div>
 
+              <h3 className="text-sm text-muted-foreground leading-relaxed mt-2">
+                2. Check system dependencies.
+              </h3>
               <div className="p-4 rounded-md border border-border bg-surface flex items-center justify-between">
                 <code className="text-foreground">sitecast doctor</code>
                 <button
@@ -73,6 +79,9 @@ export default function DocsPage() {
                 </button>
               </div>
 
+              <h3 className="text-sm text-muted-foreground leading-relaxed mt-2">
+                3. Record your first website video.
+              </h3>
               <div className="p-4 rounded-md border border-border bg-surface flex items-center justify-between">
                 <code className="text-foreground">sitecast render https://example.com</code>
                 <button
