@@ -61,8 +61,9 @@ function intArg(value: string): number {
 }
 
 export const render = new Command()
-  .name("render <url>")
+  .name("render")
   .description("Record a website as an MP4 video")
+  .argument("<url>", "The website URL to record as video")
   .option("-o, --output <path>", "Output file path (default: ./sitecast-<timestamp>.mp4)")
   .option("--width <px>", "Viewport width in pixels", intArg, DEFAULTS.width)
   .option("--height <px>", "Viewport height in pixels", intArg, DEFAULTS.height)
@@ -74,7 +75,6 @@ export const render = new Command()
   .option("--pause-top <ms>", "Pause at top of page in ms", intArg, DEFAULTS.pauseAtTopMs)
   .option("--pause-bottom <ms>", "Pause at bottom of page in ms", intArg, DEFAULTS.pauseAtBottomMs)
   .action(runRender);
-
 
 async function runRender(url: string, opts: RenderOptions): Promise<void> {
   if (opts.verbose) setVerbose(true);
@@ -235,8 +235,6 @@ function parseUrl(raw: string): URL | null {
   }
 }
 
-
-
 /**
  * When not in verbose mode, redirect stderr of child processes (FFmpeg,
  * Playwright, Xvfb) to /dev/null so they don't pollute the user's terminal.
@@ -250,7 +248,7 @@ function suppressChildProcessNoise(): void {
 
   // Patterns that indicate the line came from a child process prefixed by the
   // renderer's "[ffmpeg:...]" or "[xvfb:...]" tags.
-  const childPrefixes = ["[ffmpeg:", "[xvfb:", "[playwright:"];
+  const childPrefixes = ["[ffmpeg:", "[xvfb:", "[playwright:", "[chrome"];
 
   process.stderr.write = (
     ...args: unknown[]
